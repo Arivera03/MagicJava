@@ -10,12 +10,12 @@
     tools:context=".FirstFragment">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/VenenoMenosP1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="V-1"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="7dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -24,12 +24,121 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
+    <ImageButton
+        android:id="@+id/PasarVidaP1aP2"
+        android:layout_width="410dp"
+        android:layout_height="48dp"
+        android:src="@drawable/baseline_arrow_upward_24"
+        app:layout_constraintBottom_toTopOf="@+id/PasarVidaP2aP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/AñadirVidaP2"
+        android:layout_width="85dp"
+        android:layout_height="208dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toTopOf="@+id/PasarVidaP1aP2"
+        app:layout_constraintEnd_toEndOf="@+id/VenenoMenosP1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/VenenoMenosP1"
+        app:layout_constraintTop_toBottomOf="@+id/VenenoMenosP1" />
+
+    <ImageButton
+        android:id="@+id/QuitarVidaP2"
+        android:layout_width="79dp"
+        android:layout_height="204dp"
+        android:contentDescription="Quitarvida"
+        android:src="@drawable/baseline_favorite_border_24"
+        app:layout_constraintBottom_toTopOf="@+id/PasarVidaP1aP2"
+        app:layout_constraintEnd_toEndOf="@+id/VenenoMasP1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/VenenoMasP1"
+        app:layout_constraintTop_toBottomOf="@+id/VenenoMasP1"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <TextView
+        android:id="@+id/VIdaP2"
+        android:layout_width="82dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="60dp"
+        android:text="25/0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/PasarVidaP1aP2"
+        app:layout_constraintEnd_toStartOf="@+id/QuitarVidaP2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/AñadirVidaP2"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/VenenoMenosP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/VenenoMasP2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="V+1"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="7dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/QuitarVidaP1"
+        android:layout_width="80dp"
+        android:layout_height="209dp"
+        android:src="@drawable/baseline_favorite_border_24"
+        app:layout_constraintBottom_toTopOf="@+id/VenenoMasP2"
+        app:layout_constraintEnd_toEndOf="@+id/VenenoMasP2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/VenenoMasP2"
+        app:layout_constraintTop_toBottomOf="@+id/PasarVidaP2aP1"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <TextView
+        android:id="@+id/VidaP1"
+        android:layout_width="82dp"
+        android:layout_height="40dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/QuitarVidaP1"
+        app:layout_constraintStart_toEndOf="@+id/AñadirVidaP1"
+        app:layout_constraintTop_toBottomOf="@+id/PasarVidaP2aP1" />
+
+    <Button
+        android:id="@+id/VenenoMasP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V+1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/PasarVidaP2aP1"
+        android:layout_width="410dp"
+        android:layout_height="48dp"
+        android:contentDescription="Pasarvidacontrariodesdep2"
+        android:src="@drawable/baseline_arrow_downward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/AñadirVidaP1"
+        android:layout_width="84dp"
+        android:layout_height="203dp"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toTopOf="@+id/VenenoMenosP2"
+        app:layout_constraintEnd_toEndOf="@+id/VenenoMenosP2"
+        app:layout_constraintStart_toStartOf="@+id/VenenoMenosP2"
+        app:layout_constraintTop_toBottomOf="@+id/PasarVidaP2aP1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
