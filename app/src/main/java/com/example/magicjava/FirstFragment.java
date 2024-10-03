@@ -41,7 +41,11 @@ public class FirstFragment extends Fragment {
         AtomicInteger saludp1 = new AtomicInteger(Integer.parseInt(infovidap1[0]));
         AtomicInteger venenop1 = new AtomicInteger(Integer.parseInt(infovidap1[1]));
 
-        quitarVidaP1.setOnClickListener(e -> {
+        quitarVidaP1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View e) {
+
+            }
         });
 
 
