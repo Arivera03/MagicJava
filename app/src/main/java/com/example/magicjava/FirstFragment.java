@@ -37,13 +37,13 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         vidap1 = binding.VidaP1;
         quitarVidaP1 = binding.QuitarVidaP1;
-        String infovidap1[] = vidap1.toString().split("/");
-        AtomicInteger saludp1 = new AtomicInteger(Integer.parseInt(infovidap1[0]));
-        AtomicInteger venenop1 = new AtomicInteger(Integer.parseInt(infovidap1[1]));
 
         quitarVidaP1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View e) {
+                String infovidap1[] = vidap1.getText().toString().split("/");
+                int saludp1 = Integer.parseInt(infovidap1[0]);
+                saludp1--;
 
             }
         });
