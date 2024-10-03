@@ -105,11 +105,11 @@
         android:id="@+id/VidaP1"
         android:layout_width="82dp"
         android:layout_height="40dp"
-        android:text="TextView"
+        android:text="25/0"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/QuitarVidaP1"
-        app:layout_constraintStart_toEndOf="@+id/AñadirVidaP1"
+        app:layout_constraintStart_toEndOf="@+id/AnadirVidaP1"
         app:layout_constraintTop_toBottomOf="@+id/PasarVidaP2aP1" />
 
     <Button
@@ -133,7 +133,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/AñadirVidaP1"
+        android:id="@+id/AnadirVidaP1"
         android:layout_width="84dp"
         android:layout_height="203dp"
         android:src="@drawable/baseline_favorite_24"
