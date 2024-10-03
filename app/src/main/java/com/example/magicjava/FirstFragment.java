@@ -18,6 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class FirstFragment extends Fragment {
     private TextView vidap1;
+    private TextView vidap2;
     private ImageButton quitarVidaP1;
     private ImageButton anadirVidaP1;
     private Button venenoMenosP2;
@@ -25,8 +26,10 @@ public class FirstFragment extends Fragment {
     private ImageButton pasarVidaP2aP1;
 
     private FragmentFirstBinding binding;
-    private int saludp1 = 20;
+    private int saludp1 = 25;
     private int venenop1 = 0;
+    private int saludp2 = 25;
+    private int venenop2 = 0;
 
 
     @Override
@@ -43,36 +46,49 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         vidap1 = binding.VidaP1;
+        vidap2 = binding.VIdaP2;
         quitarVidaP1 = binding.QuitarVidaP1;
         anadirVidaP1 = binding.AnadirVidaP1;
+        venenoMenosP2 = binding.VenenoMenosP2;
+        venenoMasP2 = binding.VenenoMasP2;
 
         quitarVidaP1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View e) {
                 String infovidap1[] = vidap1.getText().toString().split("/");
-                int saludp1 = Integer.parseInt(infovidap1[0]);
+                saludp1 = Integer.parseInt(infovidap1[0]);
                 saludp1--;
                 vidap1.setText(saludp1 + "/" + venenop1);
             }
         });
 
-        quitarVidaP1.setOnClickListener(new View.OnClickListener() {
+        anadirVidaP1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View e) {
                 String infovidap1[] = vidap1.getText().toString().split("/");
-                int saludp1 = Integer.parseInt(infovidap1[0]);
-                saludp1--;
+                saludp1 = Integer.parseInt(infovidap1[0]);
+                saludp1++;
                 vidap1.setText(saludp1 + "/" + venenop1);
             }
         });
 
-        quitarVidaP1.setOnClickListener(new View.OnClickListener() {
+        venenoMenosP2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View e) {
-                String infovidap1[] = vidap1.getText().toString().split("/");
-                int saludp1 = Integer.parseInt(infovidap1[0]);
-                saludp1--;
-                vidap1.setText(saludp1 + "/" + venenop1);
+                String infovidap2[] = vidap2.getText().toString().split("/");
+                venenop2 = Integer.parseInt(infovidap2[1]);
+                venenop2--;
+                vidap2.setText(saludp2 + "/" + venenop2);
+            }
+        });
+
+        venenoMasP2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View e) {
+                String infovidap2[] = vidap2.getText().toString().split("/");
+                venenop2 = Integer.parseInt(infovidap2[1]);
+                venenop2++;
+                vidap2.setText(saludp2 + "/" + venenop2);
             }
         });
 
