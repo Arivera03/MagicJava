@@ -51,6 +51,7 @@ public class FirstFragment extends Fragment {
         anadirVidaP1 = binding.AnadirVidaP1;
         venenoMenosP2 = binding.VenenoMenosP2;
         venenoMasP2 = binding.VenenoMasP2;
+        pasarVidaP2aP1 = binding.PasarVidaP2aP1;
 
         quitarVidaP1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +79,11 @@ public class FirstFragment extends Fragment {
                 String infovidap2[] = vidap2.getText().toString().split("/");
                 venenop2 = Integer.parseInt(infovidap2[1]);
                 venenop2--;
-                vidap2.setText(saludp2 + "/" + venenop2);
+                if (venenop2 <= -1){
+                    venenop2++;
+                } else {
+                    vidap2.setText(saludp2 + "/" + venenop2);
+                }
             }
         });
 
@@ -91,6 +96,26 @@ public class FirstFragment extends Fragment {
                 vidap2.setText(saludp2 + "/" + venenop2);
             }
         });
+
+        pasarVidaP2aP1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View e) {
+                String infovidap1[] = vidap1.getText().toString().split("/");
+                saludp1 = Integer.parseInt(infovidap1[0]);
+                saludp1++;
+                String infovidap2[] = vidap2.getText().toString().split("/");
+                saludp2 = Integer.parseInt(infovidap2[0]);
+                if (saludp2 == 0){
+                    saludp1--;
+                } else {
+                    saludp2--;
+                    vidap1.setText(saludp1 + "/" + venenop1);
+                    vidap2.setText(saludp2 + "/" + venenop2);
+                }
+
+            }
+        });
+
 
 
         binding.VenenoMasP1.setOnClickListener(v ->
